@@ -8,8 +8,11 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  edge_detection: ^1.0.9
   flutter:
     sdk: flutter
+  google_ml_vision: ^0.0.7
+
 
 dev_dependencies:
   flutter_test:
@@ -21,6 +24,14 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+plugin:
+    platforms:
+      android:
+        package: com.sample.edgedetection
+        pluginClass: EdgeDetectionPlugin
+      ios:
+        pluginClass: EdgeDetectionPlugin
+
 
   # To add assets to your package, add an assets section, like this:
   # assets:
